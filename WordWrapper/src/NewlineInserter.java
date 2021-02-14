@@ -22,7 +22,7 @@ public class NewlineInserter {
             
             Scanner scanner = new Scanner(scriptFile, "UTF-8");
             while (scanner.hasNextLine()) {
-            	StringBuilder stringBuilder = new StringBuilder(myReader.nextLine());
+            	StringBuilder stringBuilder = new StringBuilder(scanner.nextLine());
                 if(stringBuilder.length() > overflowThreshold) {
                     //Overflow message
                     fileWriter.append(overflowWarning);
