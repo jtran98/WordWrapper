@@ -12,6 +12,7 @@ public class MyApp {
      */
     public static void wordWrapperOne() {
     	try {
+            boolean firstLine = true;
             //values are number of characters
             final int lengthForWordWrap = 90;
             final int overflowThreshold = 180;
@@ -106,6 +107,11 @@ public class MyApp {
                             }
                     	}
                     }
+                }
+                //needed, otherwise output file will always start off with a '?'
+                if(firstLine){
+                    stringBuilder = new StringBuilder(stringBuilder.substring(1,stringBuilder.length()));
+                	firstLine = false;
                 }
                 //adds modified line to new script file
                 fileWriter.append(stringBuilder+"\n");
