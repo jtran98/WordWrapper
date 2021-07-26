@@ -12,7 +12,6 @@ public class MyApp {
      */
     public static void wordWrapperOne() {
     	try {
-            boolean firstLine = true;
             //values are number of characters
             final int lengthForWordWrap = 90;
             final int overflowThreshold = 180;
@@ -55,7 +54,8 @@ public class MyApp {
      * Injects spaces for new lines
      */
     public static void wordWrapperTwo() {
-    	try {       
+    	try {
+            boolean firstLine = true;  
             //values are number of characters
             final int LENGTH_FOR_WORDWRAP = 60;
             final int MAX_NUMBER_OF_WORDWRAPS_PER_LINE = 2;
